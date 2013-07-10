@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang='ja'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='robots' content='noindex,nofollow'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+    <link rel='stylesheet' href='/css/jquery.jqplot.min.css'>
+    <link rel='stylesheet' href='/css/mobiscroll-2.0.min.css'>
+    <link rel='stylesheet' href='/css/jquery-mobile/jquery.mobile-1.2.0.min.css'>
+    <link rel='stylesheet' href='/css/index.css'>
+    <style>
+        #sensorBox {
+            display: none;
+        }
+    </style>
+    <script src='/js/jquery-1.8.2.min.js'></script>
+    <script src='/js/jquery.jqplot.min.js'></script>
+    <script src='/js/jquery.mobile-1.2.0.min.js'></script>
+    <!--[if IE]><script language='javascript' src='/js/excanvas.min.js'></script><![endif]-->
+    <script src='/js/jqplot.highlighter.min.js'></script>
+    <script src='/js/jqplot.dateAxisRenderer.min.js'></script>
+    <script src='/js/jqplot.canvasTextRenderer.min.js'></script>
+    <script src='/js/jqplot.canvasAxisTickRenderer.min.js'></script>
+    <script src='/js/mobiscroll-2.1.full.min.js'></script>
+    <script src='/js/mobiscroll.select.js'></script>
+    <script src='/js/dateformat.js'></script>
+    <script src='/js/thermoGraph.js'></script>
+    <script src='/js/index.js'></script>
+    <title>温度グラフ画面</title>
+</head>
+
+<body>
+    <div data-role='page' id='page'>
+        <!-- ヘッダ -->
+        <div data-theme='b' data-role='header' data-mini='true'>
+            <h3 id='tempLoggerTitle'>温度グラフ</h3>
+        </div>
+        
+        <!-- ナビゲーションバー -->
+        <div id='menu'>
+            <ul class='clearFix'>
+                <li><a href='#' name='home' id='home'>ホーム</a></li>
+                <li><a  href='#' name='sensor' id='sensor'>センサー</a></li>
+                <li><a  href='#' name='historyCal' id='historyCal'>履歴</a></li>
+            </ul>
+            <input  type='hidden' id='historyDate' name='historyDate'>
+            <div id='sensorBox'>
+                <select name='' id='selectSensor' ></select>
+            </div>
+        </div>
+        
+        <!-- コンテンツ -->
+        <div data-role='content'>
+            <div id='linechart'></div>
+        </div>
+    </div>
+</body>
+</html>
